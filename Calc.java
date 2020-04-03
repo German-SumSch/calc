@@ -64,20 +64,10 @@ public class Calc {
                 result = (double) firstArg/secondArg;
                 break;
         }
-        if (this.isCorrectAnswer(result))
-        {
-            if(format=='A'){
-                return String.valueOf(result);
-            } else {
-                return String.valueOf((Roman.arabicToRoman((int) result)));
-            }
+        if(format=='A'){
+            return String.valueOf((int) result);
         } else {
-            throw new CalculateException("incorrect answer");
+            return String.valueOf((Roman.arabicToRoman((int) result)));
         }
-    }
-
-    private boolean isCorrectAnswer(double answer)
-    {
-        return answer % 1 == 0 && answer > 0;
     }
 }

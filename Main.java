@@ -1,10 +1,11 @@
 public class Main {
     public static void main(String[] args)
     {
+        Calc calc = new Calc();
+        String result = "";
         while (true)
         {
-            Calc calc = new Calc();
-            String result = calc.request();
+            result = calc.request();
             System.out.println(result);
         }
     }
